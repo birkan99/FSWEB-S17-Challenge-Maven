@@ -1,9 +1,14 @@
 package com.workintech.spring17challenge;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.workintech.spring17challenge.entity.*;
 import com.workintech.spring17challenge.exceptions.ApiErrorResponse;
 import com.workintech.spring17challenge.exceptions.ApiException;
+import com.workintech.spring17challenge.model.Course;
+import com.workintech.spring17challenge.model.Grade;
+import com.workintech.spring17challenge.model.CourseGpa;
+import com.workintech.spring17challenge.model.HighCourseGpa;
+import com.workintech.spring17challenge.model.LowCourseGpa;
+import com.workintech.spring17challenge.model.MediumCourseGpa;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +19,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static java.lang.Integer.valueOf;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
